@@ -248,6 +248,7 @@ export default function Page() {
         <AsSeenIn />
         <PropFirm />
         <WhyChoose />
+        <HowItWorks />
       </div>
     </main>
   );
@@ -716,6 +717,194 @@ function WhyChoose() {
         />
       </div>
     </section>
+  );
+}
+
+function HowItWorks() {
+  return (
+    <section id="how" className="relative mb-8 mt-14 sm:mt-16 lg:mt-20">
+      <div className="mb-7 text-center">
+        <p className="cyber-heading text-[14px] font-black uppercase tracking-[0.28em] text-[#e1b14b]/80">
+          Process Overview
+        </p>
+
+        <h2 className="cyber-heading mt-2 text-[42px] font-black uppercase leading-none tracking-[-.015em] text-white sm:text-[52px]">
+          How It Works
+        </h2>
+
+        <p className="mx-auto mt-3 max-w-[620px] text-[16px] font-medium leading-7 text-white/62">
+          Three simple steps to get funded and start earning with our capital.
+        </p>
+      </div>
+
+      <HudPanel className="how-works-shell overflow-hidden p-5 sm:p-7 lg:p-8">
+        <div className="grid gap-7 lg:grid-cols-[1.05fr_.95fr] lg:items-stretch">
+          <div className="relative">
+            <div className="video-hud-frame relative overflow-hidden">
+              <div className="absolute left-5 top-5 z-20 cyber-cut border border-[#e1b14b]/45 bg-black/65 px-4 py-2 text-[11px] font-black uppercase tracking-[0.16em] text-[#e1b14b] shadow-[0_0_16px_rgba(225,177,75,.12)]">
+                Live Process Preview
+              </div>
+
+              <video
+                className="h-full min-h-[320px] w-full object-cover"
+                src="https://eyefg.com/wp-content/uploads/2025/12/Welcome-to-eyeFG.mp4"
+                autoPlay
+                loop
+                muted
+                playsInline
+                controls
+                controlsList="nodownload"
+              />
+
+              <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(90deg,rgba(6,5,5,.20),transparent_42%,rgba(6,5,5,.18)),linear-gradient(180deg,transparent_58%,rgba(6,5,5,.45))]" />
+            </div>
+          </div>
+
+          <div className="relative flex h-full flex-col justify-center">
+            <div className="journey-intro-panel mb-7 px-6 py-5">
+              <p className="text-[12px] font-black uppercase tracking-[0.22em] text-[#e1b14b]/78">
+                EyeFG onboarding
+              </p>
+              <h3 className="mt-2 text-[26px] font-black leading-tight text-white">
+                Get funded in 3 simple steps
+              </h3>
+            </div>
+
+            <div className="relative">
+              <JourneyFlow />
+
+              <div className="space-y-5">
+                <JourneyStep
+                  number="01"
+                  title="Purchase a challenge"
+                  text="Buy a challenge you like. Choose the account size you prefer."
+                />
+
+                <JourneyStep
+                  number="02"
+                  title="Prove Your Skills"
+                  text="Trade with our virtual capital and hit your profit targets while following our reasonable risk management rules."
+                />
+
+                <JourneyStep
+                  number="03"
+                  title="Get Funded"
+                  text="Get funded & get your profits paid regularly. Pass the challenge and receive your funded account. Get profits paid out regularly with our Quick Processing system."
+                />
+              </div>
+            </div>
+
+            <div className="mt-7">
+              <a
+                href="#challenges"
+                className="cyber-cut inline-flex h-12 w-full items-center justify-center bg-gradient-to-b from-[#e6ba5c] via-[#c99536] to-[#a97822] px-5 text-[14px] font-black text-white shadow-[0_0_14px_rgba(215,165,58,.22),inset_0_0_16px_rgba(255,255,255,.08)]"
+              >
+                START YOUR JOURNEY
+              </a>
+            </div>
+          </div>
+        </div>
+      </HudPanel>
+    </section>
+  );
+}
+
+function JourneyFlow() {
+  return (
+    <svg
+      className="journey-flow absolute left-[25px] top-[52px] hidden h-[calc(100%-104px)] w-[28px] overflow-visible sm:block"
+      viewBox="0 0 28 100"
+      preserveAspectRatio="none"
+      aria-hidden="true"
+    >
+      <path
+        d="M14 0 L14 88"
+        stroke="rgba(215,165,58,.22)"
+        strokeWidth="1"
+        strokeLinecap="round"
+        vectorEffect="non-scaling-stroke"
+      />
+
+      <path
+        className="journey-flow-dash"
+        d="M14 0 L14 88"
+        stroke="#d7a53a"
+        strokeWidth="1.4"
+        strokeLinecap="round"
+        strokeDasharray="3 13"
+        vectorEffect="non-scaling-stroke"
+      />
+
+      <circle r="2.1" fill="#f0c766" className="journey-flow-dot">
+        <animateMotion dur="2.4s" repeatCount="indefinite" path="M14 0 L14 88" />
+        <animate
+          attributeName="opacity"
+          dur="2.4s"
+          repeatCount="indefinite"
+          values="0;1;1;0"
+          keyTimes="0;0.12;0.82;1"
+        />
+      </circle>
+
+      <circle r="1.6" fill="#d7a53a" className="journey-flow-dot">
+        <animateMotion
+          dur="2.4s"
+          repeatCount="indefinite"
+          begin=".75s"
+          path="M14 0 L14 88"
+        />
+        <animate
+          attributeName="opacity"
+          dur="2.4s"
+          repeatCount="indefinite"
+          begin=".75s"
+          values="0;1;1;0"
+          keyTimes="0;0.12;0.82;1"
+        />
+      </circle>
+
+      <circle r="1.4" fill="#fff3c8" className="journey-flow-dot-white">
+        <animateMotion
+          dur="2.4s"
+          repeatCount="indefinite"
+          begin="1.45s"
+          path="M14 0 L14 88"
+        />
+        <animate
+          attributeName="opacity"
+          dur="2.4s"
+          repeatCount="indefinite"
+          begin="1.45s"
+          values="0;1;1;0"
+          keyTimes="0;0.12;0.82;1"
+        />
+      </circle>
+    </svg>
+  );
+}
+
+function JourneyStep({
+  number,
+  title,
+  text,
+}: {
+  number: string;
+  title: string;
+  text: string;
+}) {
+  return (
+    <div className="journey-step relative grid gap-4 rounded-[8px] border border-[#6b5224]/38 bg-black/30 p-5 pl-5 shadow-[inset_0_0_22px_rgba(225,177,75,.025)] sm:grid-cols-[78px_1fr] sm:pl-0">
+      <div className="relative z-10 flex items-start justify-center">
+        <div className="journey-number grid h-[54px] w-[54px] place-items-center rounded-full border border-[#e1b14b]/70 bg-[#120d06] font-mono text-[16px] font-black text-[#e1b14b] shadow-[0_0_14px_rgba(225,177,75,.20),inset_0_0_14px_rgba(225,177,75,.08)]">
+          {number}
+        </div>
+      </div>
+
+      <div>
+        <h3 className="text-[21px] font-black leading-tight text-white">{title}</h3>
+        <p className="mt-2 text-[15px] font-medium leading-7 text-white/58">{text}</p>
+      </div>
+    </div>
   );
 }
 
