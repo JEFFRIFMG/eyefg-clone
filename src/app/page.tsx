@@ -249,6 +249,8 @@ export default function Page() {
         <PropFirm />
         <WhyChoose />
         <HowItWorks />
+        <SupportedPlatforms />
+        <DiscordCommunity />
       </div>
     </main>
   );
@@ -806,6 +808,194 @@ function HowItWorks() {
         </div>
       </HudPanel>
     </section>
+  );
+}
+
+function SupportedPlatforms() {
+  return (
+    <section className="mt-14">
+      <div className="text-center">
+        <p className="cyber-heading text-[14px] font-black uppercase tracking-[0.28em] text-[#e1b14b]/80">
+          Trading Access
+        </p>
+
+        <h2 className="cyber-heading mt-2 text-[38px] font-black uppercase leading-none tracking-[-.015em] text-white sm:text-[48px]">
+          Supported{" "}
+          <span className="text-[#e1b14b] drop-shadow-[0_0_14px_rgba(225,177,75,.28)]">
+            Trading Platforms
+          </span>
+        </h2>
+      </div>
+
+      <HudPanel className="mt-7 p-6 sm:p-8">
+        <div className="grid gap-5 md:grid-cols-2">
+          <div className="platform-card">
+            <div className="platform-mark platform-mark-match">
+              <span>✣</span>
+            </div>
+            <div>
+              <p className="text-[12px] font-black uppercase tracking-[0.2em] text-white/42">
+                Platform
+              </p>
+              <h3 className="mt-2 text-[28px] font-black uppercase tracking-[-.03em] text-white">
+                Match-Trader
+              </h3>
+            </div>
+          </div>
+
+          <div className="platform-card">
+            <div className="platform-mark platform-mark-gooey">
+              <span>G</span>
+            </div>
+            <div>
+              <p className="text-[12px] font-black uppercase tracking-[0.2em] text-white/42">
+                Platform
+              </p>
+              <h3 className="mt-2 text-[28px] font-black uppercase tracking-[-.03em] text-white">
+                Gooey Trade
+              </h3>
+            </div>
+          </div>
+        </div>
+
+        <div className="newsletter-panel mt-8">
+          <div>
+            <p className="text-[12px] font-black uppercase tracking-[0.22em] text-[#e1b14b]/78">
+              Newsletter
+            </p>
+            <h3 className="mt-2 text-[25px] font-black uppercase text-white">
+              Stay updated with our newsletter!
+            </h3>
+          </div>
+
+          <form
+            className="mt-5 grid gap-4 md:grid-cols-[1fr_230px] md:items-center"
+            onSubmit={(event) => event.preventDefault()}
+          >
+            <input
+              type="email"
+              placeholder="Email"
+              aria-label="Email"
+              className="newsletter-input h-[56px] w-full rounded-[10px] border border-[#6b5224]/55 bg-[#090705] px-5 text-[16px] font-semibold text-white outline-none placeholder:text-white/55 focus:border-[#e1b14b]/80"
+            />
+            <button
+              type="submit"
+              className="primary-gold-button h-[56px] rounded-[10px] text-[15px] uppercase"
+            >
+              Subscribe
+            </button>
+          </form>
+        </div>
+      </HudPanel>
+    </section>
+  );
+}
+
+function DiscordCommunity() {
+  const members = [
+    "https://eyefg.com/wp-content/uploads/2025/11/friendly-latina-woman-casual-clothing-genuine-smil.jpg",
+    "https://eyefg.com/wp-content/uploads/2025/11/professional-trader-headshot.jpg",
+    "https://eyefg.com/wp-content/uploads/2025/11/jhj.png",
+    "https://eyefg.com/wp-content/uploads/2025/11/friendly-young-asian-man-casual-clothing-smiling-n-1.jpg",
+    "https://eyefg.com/wp-content/uploads/2025/11/professional-man-with-sunglasses.png",
+    "https://eyefg.com/wp-content/uploads/2025/11/friendly-caucasian-man-casual-clothing-warm-smile-.jpg",
+  ];
+
+  return (
+    <section className="mt-8 pb-6">
+      <div className="discord-panel">
+        <div className="relative z-10">
+          <div className="flex items-center gap-5">
+            <a
+              href="https://discord.gg/gbvDqV2xj"
+              target="_blank"
+              rel="noreferrer"
+              className="discord-icon-box"
+              aria-label="Join Discord"
+            >
+              <DiscordIcon />
+            </a>
+
+            <div>
+              <p className="text-[12px] font-black uppercase tracking-[0.22em] text-[#e1b14b]/78">
+                Community
+              </p>
+              <h2 className="mt-1 text-[29px] font-black leading-tight text-white sm:text-[34px]">
+                Join Our Discord Community
+              </h2>
+              <p className="mt-1 text-[15px] font-semibold text-white/52">
+                Click the Discord logo to join instantly
+              </p>
+            </div>
+          </div>
+
+          <p className="mt-8 max-w-[600px] text-[20px] font-semibold leading-9 text-white/82">
+            Connect with successful traders, share strategies, get exclusive market insights,
+            and receive priority support from our team.
+          </p>
+
+          <div className="mt-8 flex flex-wrap items-center gap-5">
+            <div className="member-stack flex items-center">
+              {members.map((src, index) => (
+                <img
+                  key={src}
+                  src={src}
+                  alt={`eyeFG community member ${index + 1}`}
+                  className="member-avatar"
+                  loading="lazy"
+                />
+              ))}
+            </div>
+
+            <a
+              href="https://discord.gg/gbvDqV2xj"
+              target="_blank"
+              rel="noreferrer"
+              className="inline-flex items-center gap-3 text-[15px] font-black text-white"
+            >
+              <UsersIcon />
+              Join our active members
+            </a>
+          </div>
+        </div>
+
+        <div className="relative z-10 flex items-center justify-start lg:justify-end">
+          <a
+            href="https://discord.gg/gbvDqV2xj"
+            target="_blank"
+            rel="noreferrer"
+            className="discord-cta"
+          >
+            <DiscordIcon small />
+            Join Discord
+          </a>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function DiscordIcon({ small = false }: { small?: boolean }) {
+  return (
+    <svg
+      viewBox="0 0 24 24"
+      className={small ? "h-5 w-5" : "h-9 w-9"}
+      fill="currentColor"
+      aria-hidden="true"
+    >
+      <path d="M19.5 5.2A15.6 15.6 0 0 0 15.7 4l-.2.4c1.3.3 2.5.9 3.5 1.7a11.8 11.8 0 0 0-10 0c1-.8 2.2-1.4 3.5-1.7L12.3 4a15.6 15.6 0 0 0-3.8 1.2C6.1 8.8 5.5 12.2 5.8 15.6A15 15 0 0 0 10.4 18l.6-.9a9.8 9.8 0 0 1-1.5-.7l.4-.3a10.7 10.7 0 0 0 4.2.8 10.7 10.7 0 0 0 4.2-.8l.4.3c-.5.3-1 .5-1.5.7l.6.9a15 15 0 0 0 4.6-2.4c.4-3.9-.7-7.2-2.9-10.4ZM10.3 14c-.8 0-1.4-.7-1.4-1.5S9.5 11 10.3 11s1.4.7 1.4 1.5S11.1 14 10.3 14Zm5.4 0c-.8 0-1.4-.7-1.4-1.5s.6-1.5 1.4-1.5 1.4.7 1.4 1.5-.6 1.5-1.4 1.5Z" />
+    </svg>
+  );
+}
+
+function UsersIcon() {
+  return (
+    <Svg size="h-6 w-6">
+      <path d="M17 21v-2a4 4 0 0 0-4-4H7a4 4 0 0 0-4 4v2" />
+      <circle cx="10" cy="7" r="4" />
+      <path d="M21 21v-2a4 4 0 0 0-3-3.87" />
+      <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+    </Svg>
   );
 }
 
