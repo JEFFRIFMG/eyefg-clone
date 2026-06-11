@@ -669,16 +669,18 @@ function PropFirm() {
           </span>
         </h2>
 
-        <p className="mt-5 max-w-[330px] text-[16px] font-medium leading-8 text-white/68">
-          We go beyond capital — we provide a fair opportunity for every skilled trader to
-          grow, succeed, and scale.
+        <p className="mt-5 max-w-[350px] text-[16px] font-medium leading-8 text-white/68">
+          At eyeFG we encourage traders to make the most profitable trades in their
+          challenges.
+          <br />
+          Your Success is our success
         </p>
       </HudPanel>
 
       <div className="grid gap-5 md:grid-cols-3">
-        <InfoCard icon={<GrowthIcon />} title="Growth" text="Scale up with higher capital" />
-        <InfoCard icon={<TrophyIcon />} title="Success" text="Keep up to 90% of profits" />
-        <InfoCard icon={<BoltIcon large />} title="Speed" text="Fast access, fast payouts" />
+        <InfoCard icon={<GrowthIcon />} title="Growth" text="We help you get better." />
+        <InfoCard icon={<TrophyIcon />} title="Success" text="Pass Challenges" />
+        <InfoCard icon={<BoltIcon large />} title="Speed" text="Instant Access" />
       </div>
     </section>
   );
@@ -692,7 +694,7 @@ function WhyChoose() {
           Why Choose eyeFG ?
         </h2>
         <p className="mt-2 text-[14px] font-medium text-white/48">
-          Built for traders who demand a fair, transparent, and rewarding prop trading firm.
+          We're built different. Here's what sets us apart from other prop trading firms.
         </p>
       </div>
 
@@ -700,17 +702,17 @@ function WhyChoose() {
         <ReasonCard
           icon={<ShieldIcon large />}
           title="Smooth Evaluation Process"
-          text="Clear rules, simple steps, and a trader-first approach to help you succeed."
+          text="Fair, transparent, and fast funding decisions. Get evaluated fast and easy."
         />
         <ReasonCard
           icon={<PieIcon large />}
           title="Generous Splits"
-          text="Keep up to 90% of your profits with transparent scaling."
+          text="Keep up to 90% of your profits with our industry-leading express structure."
         />
         <ReasonCard
           icon={<StarIcon large />}
           title="Smart Risk Management"
-          text="Fair risk parameters designed to protect traders and promote consistency."
+          text="Rules designed for traders, not against them. Reasonable drawdown limits."
         />
       </div>
     </section>
